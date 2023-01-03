@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primaryColor: #ad91cf;
+  --secondaryColor: rgb(196, 169, 230);
+  --blackColor: rgb(46, 46, 71);
+  --borderColor: rgb(46, 46, 71);
+  --inputColor: rgb(241, 241, 241);
+  --successColor: rgb(205, 237, 207);
+  --failureCoor: rgb(255, 0, 0);
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+body .form_container {
+  width: 290px;
+  height: 450px;
+  padding: 0 1rem;
+  border-radius: 3px;
+  border: 1px solid rgb(234, 234, 234);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  background-color: var(--primaryColor);
+  overflow: hidden;
+  z-index: 1;
+}
+body .form_container .overlay {
+  position: absolute;
+  background-color: var(--secondaryColor);
+  content: "";
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  z-index: 2;
+  top: -20%;
+}
+body .form_container .titleDiv {
+  position: relative;
+  width: 100%;
+  margin: 10px auto 5px;
+  text-align: center;
+  transform: translateY(-3rem);
+  z-index: 1000;
+}
+body .form_container .titleDiv .title {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+body .form_container .rows {
+  display: grid;
+  position: relative;
+  gap: 1rem;
+  z-index: 1000;
+  transform: translateY(-1rem);
+  padding-bottom: 1rem;
+}
+body .form_container .rows label {
+  display: block;
+  padding-bottom: 0.285rem;
+  font-size: 13px;
+}
+body .form_container .rows input {
+  width: 100%;
+  background: var(--inputColor);
+  border: none;
+  outline: none;
+  color: var(--blackColor);
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+body .form_container .rows ::-moz-placeholder {
+  font-size: 10px;
+}
+body .form_container .rows :-ms-input-placeholder {
+  font-size: 10px;
+}
+body .form_container .rows ::placeholder {
+  font-size: 10px;
+}
+body .form_container .rows #submitBtn {
+  background: var(--blackColor);
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+body .form_container .rows #submitBtn:hover {
+  background: rgb(3, 203, 235);
+  color: var(--blackColor);
+}
+body .form_container .rows .registerLink {
+  display: block;
+  font-size: 13px;
+  color: var(--blackColor);
+  text-align: center;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+body .form_container .rows .registerLink a {
+  text-decoration: none;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
