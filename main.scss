@@ -9,8 +9,8 @@
 }
 
 :root {
-    --primaryColor: #ad91cf;
-    --secondaryColor: rgb(196, 169, 230);
+    --primaryColor: #222;
+    --secondaryColor: #585858;
     --blackColor: rgb(46, 46, 71);
     --borderColor: rgb(46, 46, 71);
     --inputColor: rgb(241, 241, 241);
@@ -23,114 +23,66 @@ html {
 }
 
 body {
+    background-color: #585858;
+}
+
+header {
+    .Separator{
+        border-radius:15px;
+        display: flex;
+        justify-content: right;
+    }
+    .nav_container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        margin: 10px;
+        background-color: var(--primaryColor);
+        border-radius: 30px;
+        .button {
+            position: relative;
+            background-color:var(--primaryColor);
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 15px;
+          }
+          
+          .button:after {
+            content: "";
+            background: #f1f1f1;
+            display: block;
+            position: absolute;
+            padding-top: 300%;
+            padding-left: 350%;
+            margin-left: -20px !important;
+            margin-top: -120%;
+            opacity: 0;
+            transition: all 0.8s
+          }
+
+          .button:hover {background-color: var(--secondaryColor)}
+    }
+}
+
+article{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: auto;
     flex-direction: column;
-    width: 100vw;
+    margin: 35px;
+    background-color: var(--primaryColor);
+    border-radius: 40px;
     height: 100vh;
+    color: #FFFFFF;
 
-    .form_container {
-        width: 290px;
-        height: 450px;
-        padding: 0 1rem;
-        border-radius: 3px;
-        border: 1px solid rgb(234, 234, 234);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        margin: auto;
-        position: relative;
-        background-color: var(--primaryColor);
-        overflow: hidden;
-        z-index: 1;
-
-        .overlay {
-            position: absolute;
-            background-color: var(--secondaryColor);
-            content: '';
-            height: 500px;
-            width: 500px;
-            border-radius: 50%;
-            z-index: 2;
-            top: -20%;
-        }
-
-        .titleDiv {
-            position: relative;
-            width: 100%;
-            margin: 10px auto 5px;
-            text-align: center;
-            transform: translateY(-3rem);
-            z-index: 1000;
-
-            .title {
-                color: var(--blackColor);
-                font-weight: 700;
-                font-size: 2.5rem;
-            }
-        }
-
-        .rows {
-            display: grid;
-            position: relative;
-            gap: 1rem;
-            z-index: 1000;
-            transform: translateY(-1rem);
-            padding-bottom: 1rem;
-
-            label {
-                display: block;
-                padding-bottom: .285rem;
-                font-size: 13px;
-            }
-
-            input {
-                width: 100%;
-                background: var(--inputColor);
-                border: none;
-                outline: none;
-                color: var(--blackColor);
-                font-weight: 500;
-                padding: .5rem;
-                border-radius: 3px;
-            }
-
-            ::placeholder {
-                font-size: 10px;
-            }
-
-            #submitBtn {
-                background: var(--blackColor);
-                border-radius: 3px;
-                cursor: pointer;
-                color: white;
-
-                &:hover {
-                    background: rgb(03, 203, 235);
-                    color: var(--blackColor);
-                }
-            }
-
-            .registerLink {
-                display: block;
-                font-size: 13px;
-                color: var(--blackColor);
-                text-align: center;
-                font-weight: 400;
-                margin-top: 1rem;
-
-                a {
-                    text-decoration: none;
-                    cursor: pointer;
-                }
-            }
-        }
-
+    h1{
     }
-
-
-
+    
 }

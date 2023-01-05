@@ -7,8 +7,8 @@
 }
 
 :root {
-  --primaryColor: #ad91cf;
-  --secondaryColor: rgb(196, 169, 230);
+  --primaryColor: #222;
+  --secondaryColor: #585858;
   --blackColor: rgb(46, 46, 71);
   --borderColor: rgb(46, 46, 71);
   --inputColor: rgb(241, 241, 241);
@@ -21,104 +21,60 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  background-color: #585858;
 }
-body .form_container {
-  width: 290px;
-  height: 450px;
-  padding: 0 1rem;
-  border-radius: 3px;
-  border: 1px solid rgb(234, 234, 234);
+
+header .Separator {
+  border-radius: 15px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
+  justify-content: right;
+}
+header .nav_container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 10px;
+  background-color: var(--primaryColor);
+  border-radius: 30px;
+}
+header .nav_container .button {
   position: relative;
   background-color: var(--primaryColor);
-  overflow: hidden;
-  z-index: 1;
-}
-body .form_container .overlay {
-  position: absolute;
-  background-color: var(--secondaryColor);
-  content: "";
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  z-index: 2;
-  top: -20%;
-}
-body .form_container .titleDiv {
-  position: relative;
-  width: 100%;
-  margin: 10px auto 5px;
-  text-align: center;
-  transform: translateY(-3rem);
-  z-index: 1000;
-}
-body .form_container .titleDiv .title {
-  color: var(--blackColor);
-  font-weight: 700;
-  font-size: 2.5rem;
-}
-body .form_container .rows {
-  display: grid;
-  position: relative;
-  gap: 1rem;
-  z-index: 1000;
-  transform: translateY(-1rem);
-  padding-bottom: 1rem;
-}
-body .form_container .rows label {
-  display: block;
-  padding-bottom: 0.285rem;
-  font-size: 13px;
-}
-body .form_container .rows input {
-  width: 100%;
-  background: var(--inputColor);
   border: none;
-  outline: none;
-  color: var(--blackColor);
-  font-weight: 500;
-  padding: 0.5rem;
-  border-radius: 3px;
-}
-body .form_container .rows ::-moz-placeholder {
-  font-size: 10px;
-}
-body .form_container .rows :-ms-input-placeholder {
-  font-size: 10px;
-}
-body .form_container .rows ::placeholder {
-  font-size: 10px;
-}
-body .form_container .rows #submitBtn {
-  background: var(--blackColor);
-  border-radius: 3px;
-  cursor: pointer;
-  color: white;
-}
-body .form_container .rows #submitBtn:hover {
-  background: rgb(3, 203, 235);
-  color: var(--blackColor);
-}
-body .form_container .rows .registerLink {
-  display: block;
-  font-size: 13px;
-  color: var(--blackColor);
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
   text-align: center;
-  font-weight: 400;
-  margin-top: 1rem;
-}
-body .form_container .rows .registerLink a {
+  transition-duration: 0.4s;
   text-decoration: none;
+  overflow: hidden;
   cursor: pointer;
+  border-radius: 15px;
+}
+header .nav_container .button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+header .nav_container .button:hover {
+  background-color: var(--secondaryColor);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 35px;
+  background-color: var(--primaryColor);
+  border-radius: 40px;
+  height: 100vh;
+  color: #FFFFFF;
 }/*# sourceMappingURL=main.css.map */
