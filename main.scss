@@ -9,8 +9,9 @@
 }
 
 html body {
-    font-size: 90%;
     background-color: #585858;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -23,14 +24,27 @@ html body {
     --failureCoor: rgb(255, 0, 0);
 }
 
+::-webkit-scrollbar {
+    width: 18px;
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
 
+::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+
+// HEADER & NAV
 header {
     span {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        margin: 10px;
         background-color: var(--primaryColor);
         border-radius: 30px;
     }
@@ -39,9 +53,9 @@ header {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        margin: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
         background-color: var(--primaryColor);
-        border-radius: 30px;
 
         // Drop Down Button
         .dropdownbtn {
@@ -126,13 +140,14 @@ header {
     }
 }
 
+// MAIN PAGE
 article {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 35px;
     background-color: var(--primaryColor);
-    border-radius: 40px;
+    border-radius: 10px;
     height: 100vh;
     color: #FFFFFF;
 }
