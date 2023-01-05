@@ -6,6 +6,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+html body {
+  font-size: 90%;
+  background-color: #585858;
+}
+
 :root {
   --primaryColor: #222;
   --secondaryColor: #585858;
@@ -16,20 +21,7 @@
   --failureCoor: rgb(255, 0, 0);
 }
 
-html {
-  font-size: 90%;
-}
-
-body {
-  background-color: #585858;
-}
-
-header .Separator {
-  border-radius: 15px;
-  display: flex;
-  justify-content: right;
-}
-header .nav_container {
+header span {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
@@ -37,7 +29,54 @@ header .nav_container {
   background-color: var(--primaryColor);
   border-radius: 30px;
 }
-header .nav_container .button {
+header .container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 10px;
+  background-color: var(--primaryColor);
+  border-radius: 30px;
+}
+header .container .dropdownbtn {
+  position: relative;
+  background-color: var(--primaryColor);
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 15px;
+}
+header .container .dropdownlist-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondaryColor);
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 10px;
+}
+header .container .dropdownlist-content a {
+  border: #222 solid 2px;
+  color: darkblue;
+  padding: 14px 18px;
+  display: block;
+}
+header .container .dropdown:hover .dropdownbtn {
+  background-color: var(--secondaryColor);
+}
+header .container .dropdownlist-content a:hover {
+  background-color: lightcyan;
+}
+header .container .dropdown:hover .dropdownlist-content {
+  display: block;
+}
+header .container .button {
   position: relative;
   background-color: var(--primaryColor);
   border: none;
@@ -52,7 +91,7 @@ header .nav_container .button {
   cursor: pointer;
   border-radius: 15px;
 }
-header .nav_container .button:after {
+header .container .button:after {
   content: "";
   background: #f1f1f1;
   display: block;
@@ -64,7 +103,7 @@ header .nav_container .button:after {
   opacity: 0;
   transition: all 0.8s;
 }
-header .nav_container .button:hover {
+header .container .button:hover {
   background-color: var(--secondaryColor);
 }
 
