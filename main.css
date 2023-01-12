@@ -7,11 +7,11 @@
 }
 
 html body {
-  background-color: #585858;
+  background: #8c52ff;
   margin: 0;
   padding: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 :root {
@@ -39,94 +39,61 @@ html body {
   background-color: #1c1c1c;
 }
 
-header span {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  background-color: var(--primaryColor);
-  border-radius: 30px;
-  max-width: 100%;
+header {
+  padding: 0;
+  margin: 2rem;
 }
 header .container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  background-color: var(--primaryColor);
-  width: 100vw;
+  border: 1px #1c1c1c solid;
+  border-radius: 2rem;
 }
-header .container .dropdownbtn {
+header .container form {
   position: relative;
-  background-color: var(--primaryColor);
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  height: 100%;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 15px;
+  top: 50%;
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
 }
-header .container .dropdownlist-content {
+header .container input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
   display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+header .container .fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
   position: absolute;
-  background-color: var(--secondaryColor);
-  min-width: 200px;
-  z-index: 1;
-  border-radius: 10px;
-}
-header .container .dropdownlist-content a {
-  border: #222 solid 2px;
-  color: darkblue;
-  padding: 14px 18px;
-  display: block;
-}
-header .container .dropdown:hover .dropdownbtn {
-  background-color: var(--secondaryColor);
-}
-header .container .dropdownlist-content a:hover {
-  background-color: lightcyan;
-}
-header .container .dropdown:hover .dropdownlist-content {
-  display: block;
-}
-header .container .button {
-  position: relative;
-  background-color: var(--primaryColor);
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #8c52ff;
   text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+header .container form:hover {
+  width: 100%;
   cursor: pointer;
-  border-radius: 15px;
 }
-header .container .button:after {
-  content: "";
-  background: #f1f1f1;
+header .container form:hover input {
   display: block;
-  position: absolute;
-  opacity: 0;
-  transition: all 0.8s;
 }
-header .container .button:hover {
-  background-color: var(--secondaryColor);
-}
-
-main {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 35px;
-  background-color: var(--primaryColor);
-  border-radius: 10px;
-  height: 100vh;
-  color: #FFFFFF;
+header .container form:hover .fa {
+  background: #8c52ff;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
