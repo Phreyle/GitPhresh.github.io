@@ -12,6 +12,8 @@ html body {
     background-color: #585858;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 :root {
@@ -47,15 +49,15 @@ header {
         flex-direction: row;
         background-color: var(--primaryColor);
         border-radius: 30px;
+        max-width: 100%;
     }
 
     .container{
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        margin-bottom: 10px;
-        padding: 10px;
         background-color: var(--primaryColor);
+        width: 100vw;
 
         // Drop Down Button
         .dropdownbtn {
@@ -126,10 +128,6 @@ header {
             background: #f1f1f1;
             display: block;
             position: absolute;
-            padding-top: 300%;
-            padding-left: 350%;
-            margin-left: -20px !important;
-            margin-top: -120%;
             opacity: 0;
             transition: all 0.8s
         }
@@ -141,7 +139,7 @@ header {
 }
 
 // MAIN PAGE
-article {
+main {
     display: flex;
     align-items: center;
     flex-direction: column;
