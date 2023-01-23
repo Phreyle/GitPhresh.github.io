@@ -87,7 +87,7 @@ header {
             top: 0;
             right: 0;
             border-radius: 50%;
-            color: #8c52ff;
+            color: black;
             text-align: center;
             font-size: 1.2em;
             transition: all 1s;
@@ -107,4 +107,10 @@ header {
             color: white;
         }
     }
+}
+
+.mainpage {
+    padding: 100vh;
+    
+    background-color: beige;
 }
