@@ -1,198 +1,325 @@
 /* Reset default browser styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* header */
 header {
-    display: flex;
-    font-family: 'Alkatra', cursive;
-    font-family: 'Kanit', sans-serif;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  font-family: 'Alkatra', cursive;
+  font-family: 'Kanit', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 body {
-    background-color: #6bc9e036;
-    font-family: 'Alkatra', cursive;
-    font-family: 'Kanit', sans-serif;
+  background-color: #6bc9e036;
+  font-family: 'Alkatra', cursive;
+  font-family: 'Kanit', sans-serif;
+  overflow-x: hidden;
 }
+
 /* removing default button style */
 .button {
-    margin: 0;
-    height: auto;
-    background: transparent;
-    padding: 0;
-    border: none;
-  }
-  /* button styling */
-  .button {
-    --border-right: 6px;
-    --text-stroke-color: rgba(255,255,255,0.6);
-    --animation-color: #37FF8B;
-    --fs-size: 2em;
-    letter-spacing: 3px;
-    text-decoration: none;
-    font-size: var(--fs-size);
-    position: relative;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-    user-select: none;
-  }
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
 
-  .hover-text {
-    position: absolute;
-    box-sizing: border-box;
-    content: attr(data-text);
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color);
-  }
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  user-select: none;
+}
 
-  .button:hover .hover-text {
-    width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color))
-  }
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
 
 /* HOME ABOUT PORTFOLIO */
 nav ul {
-    display: flex;
+  display: flex;
 }
 
 nav li {
-    list-style: none;
+  list-style: none;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 nav .box {
-    width: 140px;
-    height: auto;
-    float: left;
-    transition: .5s linear;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    padding: 15px;
-    text-align: center;
-    margin: 0 5px;
-    background: transparent;
-    text-transform: uppercase;
-    font-weight: 900;
-    cursor: pointer;
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 nav .box:before {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    width: 100%;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid transparent;
-    box-sizing: border-box;
-    transform: translateX(100%);
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
 }
 
 nav .box:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-top: 4px solid transparent;
-    border-right: 4px solid transparent;
-    box-sizing: border-box;
-    transform: translateX(-100%);
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
 }
 
 nav .box:hover {
-    box-shadow: 0 5px 15px rgb(55, 255, 139, 0.5);;
+  box-shadow: 0 5px 15px rgb(55, 255, 139, 0.5);
+  ;
 }
 
 nav .box:hover:before {
-    border-color: #37FF8B;
-    height: 100%;
-    transform: translateX(0);
-    transition: .3s transform linear, .3s height linear .3s;
+  border-color: #37FF8B;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
 }
 
 nav .box:hover:after {
-    border-color: #37FF8B;
-    height: 100%;
-    transform: translateX(0);
-    transition: .3s transform linear, .3s height linear .5s;
+  border-color: #37FF8B;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
 }
 
 /* Main */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Card */
+/* Card Scrolling Effect */
+.header,
+.footer {
+  background-color: #001627;
+  color: white;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
-    margin: 6rem;
-    width: 100%;
-    height: 40em;
-    border-radius: 4px;
-    background: #212121;
-    display: flex;
-    gap: 5px;
-    padding: .4em;
-  }
-  
-  .card p {
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .5s;
-    background: #212121;
-    border: 1px solid #37ff8a25;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card p:hover {
-    flex: 4;
-  }
-  
-  .card p span {
-    min-width: 14em;
-    padding: .5em;
-    text-align: center;
-    transform: rotate(-90deg);
-    transition: all .5s;
-    text-transform: uppercase;
-    color: #37FF8B;
-    letter-spacing: .1em;
-  }
-  
-  .card p:hover span {
-    transform: rotate(0);
-  }
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(55, 50, 100, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.card img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.card-content {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Start Button */
+.Start-link .button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.Start-link .button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.Start-link .button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.Start-link .button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.Start-link .button:active,
+.button:focus {
+  outline: none;
+}
+
+.Start-link .button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.Start-link .button:active::before {
+  top: 3px;
+}
+
+.Start-link .button:active::after {
+  bottom: 3px;
+}
+
+.Start-link .button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.Start-link .button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.Start-link .button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.Start-link .button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #ff4655;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.Start-link .button_text {
+  position: relative;
+}
+
+.Start-link .button:hover {
+  color: #0f1923;
+}
+
+.Start-link .button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.Start-link .button:hover .button_lg::after {
+  background-color: #fff;
+}
